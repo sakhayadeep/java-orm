@@ -37,4 +37,10 @@ public class PersonBo {
 			System.out.println(li.get(i));
 		}
 	}
+	
+	public void it() throws Exception {
+		PersonDao ob = new PersonDao();
+		System.out.println("Enter salary:");
+		ob.incomeTax(Integer.parseInt(Read.br.readLine()));
+	}
 }

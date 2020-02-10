@@ -1,8 +1,5 @@
 package dao;
 
-import java.util.List;
-
-import bean.PersonBean;
 import bo.PersonBo;
 
 public class Day5Demo15 {
@@ -11,10 +8,9 @@ public class Day5Demo15 {
 		try {
 			
 			int ch = 0;
-			PersonDao ob = new PersonDao();
 			PersonBo bo = new PersonBo();
 			do {
-				System.out.println("0 exit, 1 insert, 2 display all, 3 display any :");
+				System.out.println("0 exit, 1 insert, 2 display all, 3 display any, 4 tax :");
 				
 				ch = Integer.parseInt(Read.br.readLine());
 				
@@ -30,6 +26,8 @@ public class Day5Demo15 {
 					break;
 				case 3: bo.displayAny();
 					break;
+				case 4: bo.it();
+				break;
 				default: System.out.println("Invalid option!");
 				}
 			

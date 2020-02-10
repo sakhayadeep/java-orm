@@ -1,12 +1,15 @@
 package dao;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Types;
 import java.util.ArrayList;
 import java.util.List;
 
 import bean.PersonBean;
+import jdk.internal.org.objectweb.asm.Type;
 
 public class PersonDao {
 	public List<PersonBean> getAll() throws Exception{
@@ -63,6 +66,16 @@ public class PersonDao {
 		ps.setString(5, ob.getState());
 		
 		ps.executeUpdate();
+	}
+	
+	public void incomeTax(int salary) throws Exception {
+		Connection co = DbConnect.get();
+		CallableStatement cs = co.prepareCall("{? = call it_calculator(?)}");
+		
+		cs.registerOutParameter(1, Types.INTEGER);
+		cs.setInt(2, salary);
+		cs.execute();
+		System.out.println("It = "+cs.getInt(1));
 	}
 	
 }
