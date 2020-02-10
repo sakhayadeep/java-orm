@@ -11,7 +11,6 @@ public class DbConnect {
 			co = DriverManager.getConnection("jdbc:postgresql://localhost:5432/demo", "postgres", "1");
 			
 		}
-		//System.out.println(co);
 		return co;
 	}
 }
