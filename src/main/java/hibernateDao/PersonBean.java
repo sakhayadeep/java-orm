@@ -7,13 +7,13 @@ import javax.persistence.Entity;
 @Entity(name = "person")
 public class PersonBean {
 	@Id
-	int id;
+	Integer id;
 	@Column
 	String fname;
 	@Column
 	String lname;
 	@Column
-	int age;
+	Integer age;
 	@Column
 	String state;
 	
@@ -27,10 +27,10 @@ public class PersonBean {
 		this.age = age;
 		this.state = state;
 	}
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getFname() {
@@ -45,10 +45,10 @@ public class PersonBean {
 	public void setLname(String lname) {
 		this.lname = lname;
 	}
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 	public String getState() {
