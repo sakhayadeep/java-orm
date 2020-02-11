@@ -21,7 +21,7 @@ public class PersonBo {
 		ob1.InsertPerson(ob);
 	}
 	
-	public void displayAll()  throws Exception{
+	public void displayAll() throws Exception{
 		PersonDao ob = new PersonDao();
 		List<PersonBean> li = ob.getAll();
 		for (int i = 0; i < li.size(); i++) {
